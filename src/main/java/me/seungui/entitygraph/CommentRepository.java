@@ -15,5 +15,5 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
 //
 //    List<CommentVoteOnly> findVoteById(Long id);
 
-    <T> List<T> findVoteById(Long id, Class<T> type);
+    <T> List<T> findCommentById(Long id, Class<T> type);
 }

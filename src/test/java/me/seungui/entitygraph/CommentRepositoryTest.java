@@ -43,7 +43,7 @@ class CommentRepositoryTest {
         comment.setPost(savedPost);
         Comment savedComment = commentRepository.save(comment);
 
-        commentRepository.findVoteById(2L, CommentSummary.class).forEach(c -> {
+        commentRepository.findCommentById(2L, CommentSummary.class).forEach(c -> {
             System.out.println("=====================================================================");
             System.out.println(c.getVotes());
             System.out.println("=====================================================================");
@@ -66,12 +66,14 @@ class CommentRepositoryTest {
         comment.setPost(savedPost);
         Comment savedComment = commentRepository.save(comment);
 
-        commentRepository.findVoteById(2L, CommentOnly.class).forEach(c -> {
+        commentRepository.findCommentById(2L, CommentOnly.class).forEach(c -> {
             System.out.println("=====================================================================");
             System.out.println(c.getComment());
             System.out.println("=====================================================================");
         });
     }
+
+
 }
 
 
